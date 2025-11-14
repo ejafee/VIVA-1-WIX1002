@@ -16,7 +16,7 @@ public class VIVA1Q2 {
         String[] results = new String[queries];
 
         // Initialize loop to process each query
-        for (int i = 1; i <= queries; i++) {
+        for (int i = 0; i < queries; i++) {
 
             // Taking digits and lucky number input
             System.out.print("Enter the digits & lucky number to analyze: ");
