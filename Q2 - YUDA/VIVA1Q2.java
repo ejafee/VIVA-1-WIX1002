@@ -13,6 +13,11 @@ public class VIVA1Q2 {
         Scanner input = new Scanner(System.in);
         System.out.print("\nEnter the number of queries (1-200): ");
         int queries = input.nextInt();
+        if (queries < 1 || queries > 200) {
+            System.out.println("The number is exceeding the limit. Please enter a number between 1 and 200.");
+            input.close();
+            return;
+        }
         String[] results = new String[queries];
 
         // Initialize loop to process each query
