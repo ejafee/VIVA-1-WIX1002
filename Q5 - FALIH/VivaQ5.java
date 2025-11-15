@@ -40,5 +40,3 @@ public class VivaQ5 {
         }
     }
 }
-
-//tes
