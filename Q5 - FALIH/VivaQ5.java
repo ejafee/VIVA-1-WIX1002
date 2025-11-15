@@ -1,16 +1,27 @@
+import java.util.Locale;
 import java.util.Scanner;
 public class VivaQ5 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the number of words: ");
-        int T = sc.nextInt();
-        sc.nextLine();
+        int T;
+        while (true) {
+            System.out.println("Enter the number of words (1-100) : ");
+            T = sc.nextInt();
+            sc.nextLine();
+
+            if (T >= 1 && T <= 100) {
+                break; // exit the while loop when T is valid
+            } else {
+                System.out.println("Invalid number! Enter 1–100 only.");
+            }
+        }
+
 
         for (int i = 0; i < T; i++) {
-            System.out.println((i + 1) + " word: ");
-            String word = sc.nextLine();
+            System.out.println("word " + (i + 1) + ":");
+            String word = sc.nextLine().toLowerCase();
             boolean isHarmony = true;
 
             // Rule 1: last letter cannot be a vowel
@@ -40,5 +51,3 @@ public class VivaQ5 {
         }
     }
 }
-
-//tes
