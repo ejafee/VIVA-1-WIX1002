@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class VIVA1Q2 {
     public static void main(String[] args) {
         // Displaying the input's format to the user
-        System.out.println("=============Format of Input=============");
+        System.out.println("=============Format of Input==============");
         System.out.println("Number of queries is a single digit (1-200)");
         System.out.println("Lucky number is single digit (0-9)");
-        System.out.println("=========================================");
+        System.out.println("==========================================");
 
         // Taking queries input to determine the number of digits and array size
         Scanner input = new Scanner(System.in);
