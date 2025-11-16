@@ -62,6 +62,6 @@ public class VIVA1Q5 {
             } else {
                 System.out.println("Chaos");
             }
-        }
+        } sc.close();
     }
 }
