@@ -46,7 +46,7 @@ public class VIVA1Q4 {
         // get the very first gem (e.g., "sat")
         String firstGem = lowerWord.substring(0, k);
 
-        // Set all our champions to this first gem
+        // set the very first gem to be "temporary winner" (can be changed later)
         String firstWhisper = firstGem;
         String coreValue = firstGem;
         String lastEcho = firstGem;
@@ -58,37 +58,35 @@ public class VIVA1Q4 {
         }
 
         // THE MAIN LOOP
-        // This loop slides the "window" from the second gem onwards
+        // starts at index 1, and stops at the last index (last index = word length - k)
         for (int i = 1; i <= wordLength - k; i++) {
 
             // Get the gem we are currently checking (e.g., "ata", "tay"...)
             String currentGem = lowerWord.substring(i, i + k);
 
-            // --- Comparison 1: "First Whisper" (Smallest) ---
+            // condition 1 "First Whisper"
             if (currentGem.compareTo(firstWhisper) < 0) {
                 firstWhisper = currentGem;
             }
 
-            // --- Comparison 2: "Core Value" (Largest) ---
+            // condition 2 "Core Value"
             if (currentGem.compareTo(coreValue) > 0) {
                 coreValue = currentGem;
             }
 
-            // --- Comparison 3: "Last Echo" (Heaviest) ---
+            // condition 3 "Last Echo"
+            int currentScore = 0; // Reset score to 0 for each new gem (index)
 
-            // This is the new part. We calculate the score right here.
-            int currentScore = 0; // Reset score to 0 for each new gem
-
-            // This is the NESTED LOOP. It loops through the letters
-            // of *only* the currentGem (e.g., "a", "t", "a")
+            // this is the nested loop, it loops through the letters, only on the "current gem" (each index)
+            // this loop adds "score" for each letter in the "gem"
             for (int j = 0; j < currentGem.length(); j++) {
                 currentScore = currentScore + currentGem.charAt(j);
             }
 
-            // Now we compare the score we just found
+            // comparing the score we just found
             if (currentScore > maxScore) {
-                maxScore = currentScore; // New high score
-                lastEcho = currentGem;   // New heaviest gem
+                maxScore = currentScore; // new high score
+                lastEcho = currentGem;   // new heaviest gem
             }
         }
 
