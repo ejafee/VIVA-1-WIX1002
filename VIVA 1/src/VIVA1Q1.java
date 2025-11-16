@@ -33,7 +33,7 @@ public class VIVA1Q1 {
         // Proses SEMUA input terlebih dahulu
         for (int i = 0; i < queries; i++) {
             System.out.println("\n--- Query " + (i + 1) + " ---");
-
+            
             // Input initial value dengan validasi
             boolean valid = false;
             while (!valid) {
@@ -92,7 +92,7 @@ public class VIVA1Q1 {
         // Proses semua hasil setelah semua input dikumpulkan
         for (int i = 0; i < queries; i++) {
             results[i] = new int[charmLengths[i]];
-
+            
             for (int j = 0; j < charmLengths[i]; j++) {
                 // Formula: initialValue + (multiplierSeed * 2^j)
                 int charmFormula = initialValues[i] + (multiplierSeeds[i] * (int)Math.pow(2, j));

@@ -12,7 +12,7 @@ public class VIVA1Q2 {
         Scanner input = new Scanner(System.in);
         System.out.print("\nEnter the number of queries (1-200): ");
 
-        int queries = -1; // Set the queries value to -1 because if the user input is invalid, it won't create an array with negative size
+        int queries = -1; // Set the queries value to -1 because if the user input is invalid, it won't create an array with negative size 
         boolean validInput = false;
 
         while (!validInput) {
