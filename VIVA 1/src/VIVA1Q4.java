@@ -32,7 +32,7 @@ public class VIVA1Q4 {
 
             } else {
                 // if error the loop repeats
-                System.out.println("\nError: Gem length (k) must be positive,less than/equal to the word's length.");
+                System.out.println("\nError: Gem length (k) must be positive,and less than/equal to the word's length.");
                 System.out.println("Please try again.\n");
             }
         }
