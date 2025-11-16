@@ -12,7 +12,7 @@ public class VIVA1Q2 {
         Scanner input = new Scanner(System.in);
         System.out.print("\nEnter the number of queries (1-200): ");
 
-        int queries = -1; //declare it to -1 because the number of queries must be at least 1 so -1 would be invalid
+        int queries = -1; // Set the queries value to -1 because if the user input is invalid, it won't create an array with negative size 
         boolean validInput = false;
 
         while (!validInput) {
@@ -34,6 +34,7 @@ public class VIVA1Q2 {
 
         // Initialize loop to process each query
         for (int i = 0; i < queries; i++) {
+            System.out.println("\n--- Query " + (i + 1) + " ---");
 
             // Taking digits and lucky number input
             System.out.print("Enter the digits: ");
@@ -92,7 +93,9 @@ public class VIVA1Q2 {
         // Display the results for all queries according to the list in the results array
         System.out.println("\n=========Results=========");
         for (int i = 0; i < queries; i++) {
-            System.out.println(results[i]);
+            System.out.print("Query " + (i + 1) + ": ");
+            System.out.print(results[i]);
+            System.out.println();
         }
         input.close();
     }
