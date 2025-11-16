@@ -2,35 +2,54 @@ import java.util.Scanner;
 
 public class VIVA1Q4 {
     public static void main(String[] args) {
-        // --- 1. GET USER INPUT ---
+        // user input
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a single word (no space!): ");
-        String word = scanner.nextLine();
+        // declare variables *outside* the loop
+        String word;
+        int k;
+        int wordLength;
 
-        System.out.print("Please enter the gem length (k): ");
-        int k = scanner.nextInt();
-        scanner.close();
+        // inf loop for user input (handles error too)
+        // the way it works it's like a "security check". if the input is accepted,
+        while (true) {
 
-        // --- 2. SETUP ---
-        String lowerWord = word.toLowerCase();
-        int wordLength = lowerWord.length();
+            System.out.print("Enter a single word (no space!): ");
+            word = scanner.nextLine();
 
-        // error handling if gem length more than the length of the word itself
-        if (k > wordLength) {
-            System.out.println("Error: Gem length (k) cannot be longer than the word.");
-            return;
+            System.out.print("Enter the gem length (k): ");
+            k = scanner.nextInt();
+
+            //this code in the next line is to remove the "leftover" enter, common bug in java.
+            scanner.nextLine();
+
+            // get the length amount
+            wordLength = word.length();
+
+            // checking if the input is acceptable
+            if (k > 0 && k <= wordLength) {
+                break;
+
+            } else {
+                // if error the loop repeats
+                System.out.println("\nError: Gem length (k) must be positive,less than/equal to the word's length.");
+                System.out.println("Please try again.\n");
+            }
         }
 
-        // --- 3. INITIALIZE "CHAMPION" VARIABLES ---
+        scanner.close();
+        // ignoring uppercase (converts to lowercase)
+        String lowerWord = word.toLowerCase();
 
-        // Get the very first gem (e.g., "sat")
+        // setting up variables for the "gem finder"
+
+        // get the very first gem (e.g., "sat")
         String firstGem = lowerWord.substring(0, k);
 
         // Set all our champions to this first gem
-        String firstWhisper = firstGem; // Smallest
-        String coreValue = firstGem;    // Largest
-        String lastEcho = firstGem;     // Heaviest
+        String firstWhisper = firstGem;
+        String coreValue = firstGem;
+        String lastEcho = firstGem;
 
         // We need to calculate the score for the first gem ("sat")
         int maxScore = 0;
@@ -38,7 +57,7 @@ public class VIVA1Q4 {
             maxScore = maxScore + firstGem.charAt(j);
         }
 
-        // --- 4. THE MAIN LOOP ---
+        // THE MAIN LOOP
         // This loop slides the "window" from the second gem onwards
         for (int i = 1; i <= wordLength - k; i++) {
 
@@ -73,7 +92,7 @@ public class VIVA1Q4 {
             }
         }
 
-        // --- 5. PRINT THE FINAL WINNERS ---
+        // final output
         System.out.println("--- The 3 Winners ---");
         System.out.println(firstWhisper + " is the First Whisper");
         System.out.println(lastEcho + " is the Last Echo");
