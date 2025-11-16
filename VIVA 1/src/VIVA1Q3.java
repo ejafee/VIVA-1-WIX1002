@@ -55,7 +55,7 @@ public class VIVA1Q3 {
                 System.out.println("Please enter a height between 1 and 9.");
             }
         }
-        input.close()
+        input.close();
     }
 }
 
