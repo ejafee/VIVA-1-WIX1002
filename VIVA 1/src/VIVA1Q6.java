@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class StutterDecompressor {
+public class VIVA1Q6 {
     
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

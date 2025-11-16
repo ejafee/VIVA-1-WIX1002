@@ -4,6 +4,7 @@ public class VIVA1Q5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // asking the user to input number of words
         int T;
         while (true) {
             System.out.println("Enter the number of words (1-100) : ");
@@ -17,7 +18,7 @@ public class VIVA1Q5 {
             }
         }
 
-
+        // asking & checking the words whether it contains other character rather than a letter
         for (int i = 0; i < T; i++) {
             String word;
             while (true) {
