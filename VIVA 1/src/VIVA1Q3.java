@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class VIVA {
+
+public class VIVA1Q3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int height;
@@ -56,3 +57,4 @@ public class VIVA {
         }
     }
 }
+

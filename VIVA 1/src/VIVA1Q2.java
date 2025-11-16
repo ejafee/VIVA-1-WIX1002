@@ -11,10 +11,10 @@ public class VIVA1Q2 {
         // Taking queries input to determine the number of digits and array size
         Scanner input = new Scanner(System.in);
         System.out.print("\nEnter the number of queries (1-200): ");
-        
+
         int queries = -1; //declare it to -1 because the number of queries must be at least 1 so -1 would be invalid
         boolean validInput = false;
-        
+
         while (!validInput) {
             try {
                 queries = input.nextInt();
@@ -54,11 +54,11 @@ public class VIVA1Q2 {
                 i--; // Decrement i to repeat this iteration
                 continue;
             }
-           
+
             // Initializing variables to count occurrences
             int luckyCount = 0;
             int evenCount = 0;
-            int oddCount = 0;   
+            int oddCount = 0;
             int zeroCount = 0;
 
             // Looping through each digit in the number string 12345 5

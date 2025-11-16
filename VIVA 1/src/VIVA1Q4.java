@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+public class VIVA1Q4 {
     public static void main(String[] args) {
         // --- 1. GET USER INPUT ---
         Scanner scanner = new Scanner(System.in);
