@@ -91,7 +91,7 @@ public class VIVA1Q4 {
         }
 
         // final output
-        System.out.println("--- The 3 Winners ---");
+        System.out.println("--- The 3 GEMS ---");
         System.out.println(firstWhisper + " is the First Whisper");
         System.out.println(lastEcho + " is the Last Echo");
         System.out.println(coreValue + " is the Core Value");
