@@ -6,11 +6,13 @@ public class VIVA1Q6 {
         Scanner input = new Scanner(System.in);
         
         // INPUT: Read number of test cases
+        System.out.print("Enter how many times you want to decompress: ");
         int T = input.nextInt();
         input.nextLine(); // Consume the newline character after the integer
         
         // Process each log string
         for (int i = 0; i < T; i++) {
+            System.out.print("Enter your compressed files: ");
             String compressed = input.nextLine();
             
             // Call function to decompress the log
