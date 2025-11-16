@@ -1,7 +1,7 @@
 import java.util.Scanner;
-public class VivaQ5 {
-    public static void main(String[] args) {
 
+public class VIVA1Q5 {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         int T;
